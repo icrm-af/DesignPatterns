@@ -1,0 +1,27 @@
+<!--
+    @description       : 
+    @author            : Adrian Flores
+    @group             : 
+    @last modified on  : 06-24-2021
+    @last modified by  : Adrian Flores
+    Modifications Log 
+    Ver   Date         Author          Modification
+    1.0   06-24-2021   Adrian Flores   Initial Version
+-->
+<template>
+	<lightning-card title="Payment Method" icon-name="standard:payment_gateway">
+		<lightning-combobox
+			class="slds-var-p-horizontal_small"
+			name="paymentOption"
+			label="Payment Method"
+			value=""
+			placeholder="Select a payment method"
+			options={options}
+			onchange={handleChange}
+			required
+		></lightning-combobox>
+		<div class="slds-var-m-top_small slds-var-m-left_x-small slds-align_absolute-center">
+			<lightning-button label="Submit Payment" onclick={submit}> </lightning-button>
+		</div>
+	</lightning-card>
+</template>
